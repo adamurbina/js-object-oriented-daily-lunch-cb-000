@@ -32,10 +32,12 @@ class Neighborhood {
   meals(){
     const deliveries = this.deliveries();
 
-    return deliveries.map(
+    const meals = deliveries.map(
       function (delivery) {
         return delivery.meal();
       });
+
+    return [...new Set(meals)]
   };
 
 };
