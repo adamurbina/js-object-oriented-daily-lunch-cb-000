@@ -35,8 +35,7 @@ class Neighborhood {
     return deliveries.map(
       function (delivery) {
         return delivery.meal();
-      }
-    );
+      });
   };
 
 };
