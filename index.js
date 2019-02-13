@@ -37,7 +37,7 @@ class Neighborhood {
         return delivery.meal();
       });
 
-    return [...new Set(meals)]
+    return [...new Set(meals)];
   };
 
 };
@@ -104,6 +104,16 @@ class Meal {
         return delivery.customer();
       });
   };
+
+  static byPrice(){
+    const meals = store.meals;
+
+    return meals.sort(function (a,b) {
+      return b.price - a.price
+    });
+    
+  };
+  
 };
 
 class Delivery{
