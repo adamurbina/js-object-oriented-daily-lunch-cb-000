@@ -38,7 +38,7 @@ class Neighborhood {
       };
     );
   };
-  
+
 };
 
 class Customer{
@@ -73,9 +73,9 @@ class Customer{
 
     return mealPrices.reduce(
       function(a,b){ return a+b;},0
-    );  
+    );
   };
-  
+
 };
 
 class Meal {
