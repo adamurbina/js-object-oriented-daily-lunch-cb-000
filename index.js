@@ -62,7 +62,7 @@ class Customer{
         return meal.price;
       }
     );
-    
+
     return mealPrices.reduce(
       function(a,b){ return a+b;},0
     );  
