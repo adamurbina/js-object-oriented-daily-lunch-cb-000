@@ -28,6 +28,17 @@ class Neighborhood {
       }.bind(this)
     );
   };
+
+  meals(){
+    const deliveries = deliveries();
+
+    return deliveries.map(
+      function (delivery) {
+        return delivery.meal();
+      };
+    );
+  };
+  
 };
 
 class Customer{
@@ -58,16 +69,13 @@ class Customer{
 
   totalSpent(){
     const mealPrices = this.meals().map(
-      function (meal) {
-        return meal.price;
-      }
-    );
+      function (meal) {return meal.price;});
 
     return mealPrices.reduce(
       function(a,b){ return a+b;},0
     );  
   };
-
+  
 };
 
 class Meal {
