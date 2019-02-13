@@ -56,6 +56,18 @@ class Customer{
       });
   };
 
+  totalSpent(){
+    const mealPrices = this.meals().map(
+      function (meal) {
+        return meal.price;
+      }
+    );
+    
+    return mealPrices.reduce(
+      function(a,b){ return a+b;},0
+    );  
+  };
+
 };
 
 class Meal {
